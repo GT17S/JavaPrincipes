@@ -13,9 +13,7 @@ public class Employe implements Salarie {
     private coordonnees coordonne;
 
 
-    public String getCoordonnees() {
-        return coordonne.toString();
-    }
+    public void setEXP(int exp){this.nombreAnnees=exp;}
 
     @Override
     public double calculSalaire() {

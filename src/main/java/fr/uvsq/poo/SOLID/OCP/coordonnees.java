@@ -8,8 +8,17 @@ package fr.uvsq.poo.SOLID.OCP;
 
 public class coordonnees {
 
+    public  coordonnees(String nom,String adresse)
+    {
+        this.adresse=nom;
+        this.nom=adresse;
+    }
+
     private String nom;
     private String adresse;
+
+    public void setNom(String name){this.nom=name;}
+    public void setAdresse(String name){this.adresse=name;}
 
     @Override
     public String toString() {

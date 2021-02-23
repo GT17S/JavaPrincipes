@@ -11,6 +11,7 @@ import java.util.List;
 
 public class Entreprise {
 
+
     private List<Salarie> salarieList;
 
     public Entreprise() {
@@ -23,5 +24,9 @@ public class Entreprise {
             sum += s.calculSalaire();
         }
         return sum;
+    }
+
+    public List<Salarie> getSalarieList() {
+        return salarieList;
     }
 }
