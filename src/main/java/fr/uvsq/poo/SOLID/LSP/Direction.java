@@ -14,6 +14,8 @@ public class Direction {
     public Direction(){this.direct="";}
     public Direction(String dir){setDirection(dir);}
 
+    public String getDirection(){return direct;}
+
     public void setDirection(String direction) {
         switch (direction) {
             case "LEFT":
