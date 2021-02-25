@@ -12,7 +12,7 @@ public class Direction {
     private String direct;
 
     public Direction(){this.direct="";}
-    public Direction(String dir){setDirection(dir);}
+    public Direction(String dir){ setDirection(dir);}
 
     public String getDirection(){return direct;}
 
