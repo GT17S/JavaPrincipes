@@ -6,7 +6,17 @@ package fr.uvsq.poo.SOLID.LSP;
  * @version 2021
  */
 
-public interface Robot {
-    Position position= new Position();
-    Direction direction= new Direction();
+public class Robot {
+    private Direction direction;
+    private Position position;
+
+    Robot(Position position1,String direction1)
+    {
+        position= new Position(position1.getX(),position1.getY());
+        direction= new Direction(direction1);
+    }
+
+    public Position getPOS(){return this.position;}
+    public Direction getDIR(){return this.direction;}
+
 }

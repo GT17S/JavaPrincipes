@@ -9,55 +9,32 @@ package fr.uvsq.poo.SOLID.LSP;
 
 public class RobotMobile extends RobotStatique {
 
-    public Position getPOS(){return this.position;}
-    public Direction getDIR(){return this.direction;}
-
-    public void setPOS(int x, int y){this.position.setX(x); this.position.setY(y);}
-    public void setDIR(String direction){this.direction.setDirection(direction);}
+    public void setPOS(int x, int y){this.getPOS().setX(x); this.getPOS().setY(y);}
+    public void setDIR(String direction){this.getDIR().setDirection(direction);}
 
     public RobotMobile(Position position1, String direction1) {
         super(position1, direction1);
     }
 
     public void avance() {
-        if (this.direction.getDirection() == "LEFT") {
-            this.position.setX(this.position.getX() - 1);
-        } else if (this.direction.getDirection() == "RIGHT") {
-            this.position.setX(this.position.getX() + 1);
-        } else if (this.direction.getDirection() == "BACKWARD"){
-            this.position.setY(this.position.getY() - 1);
-        } else this.position.setY(this.position.getY() + 1);
+        if (this.getDIR().getDirection() == "LEFT") {
+            this.getPOS().setX(this.getPOS().getX() - 1);
+        } else if (this.getDIR().getDirection() == "RIGHT") {
+            this.getPOS().setX(this.getPOS().getX() + 1);
+        } else if (this.getDIR().getDirection() == "BACKWARD"){
+            this.getPOS().setY(this.getPOS().getY() - 1);
+        } else this.getPOS().setY(this.getPOS().getY() + 1);
     }
 
     public void tourne(){
-        if (this.direction.getDirection() == "LEFT") {
+        if (this.getDIR().getDirection() == "LEFT") {
             setDIR("FORWARD");
-        } else if (this.direction.getDirection() == "RIGHT") {
+        } else if (this.getDIR().getDirection() == "RIGHT") {
             setDIR("BACKWARD");
-        } else if (this.direction.getDirection() == "BACKWARD"){
+        } else if (this.getDIR().getDirection() == "BACKWARD"){
             setDIR("LEFT");
         } else
             setDIR("RIGHT");
     }
 
-    public static void main(String[] args) {
-        RobotMobile m= new RobotMobile(new Position(0,0),"LEFT");
-        m.avance();
-        System.out.println("x= "+ m.getPOS().getX()+"  "+"Y= "+m.getPOS().getY());
-
-        m.avance();
-        System.out.println("x= "+ m.getPOS().getX()+"  "+"Y= "+m.getPOS().getY());
-
-        m.avance();
-        System.out.println("x= "+ m.getPOS().getX()+"  "+"Y= "+m.getPOS().getY());
-
-        m.setDIR("RIGHT");
-        System.out.println(m.getDIR().getDirection());
-        m.avance();
-        System.out.println("x= "+ m.getPOS().getX()+"  "+"Y= "+m.getPOS().getY());
-
-        m.tourne();
-        System.out.println(m.getDIR().getDirection());
-
-    }
 }
