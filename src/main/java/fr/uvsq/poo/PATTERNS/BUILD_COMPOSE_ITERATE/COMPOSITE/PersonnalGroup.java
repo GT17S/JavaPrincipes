@@ -1,5 +1,8 @@
 package fr.uvsq.poo.PATTERNS.BUILD_COMPOSE_ITERATE.COMPOSITE;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * La classe <code>PersonnalGroup</code> représente la classe de d'un groupe de Personnel de travail.
  *
@@ -9,6 +12,23 @@ package fr.uvsq.poo.PATTERNS.BUILD_COMPOSE_ITERATE.COMPOSITE;
 
 public class PersonnalGroup extends PersonnalType {
 
+    private final List<PersonnalType> personnelList;
+
+    public PersonnalGroup() {
+        personnelList = new ArrayList<PersonnalType>();
+    }
+
+    public void addPersonnel(PersonnalType p) {
+        personnelList.add(p);
+    }
+
+    public void removePersonnel(PersonnalType p) {
+        personnelList.remove(p);
+    }
+
+    public List<PersonnalType> getAllPersonnel() {
+        return personnelList;
+    }
     
     @Override
     public boolean isGroup() {
