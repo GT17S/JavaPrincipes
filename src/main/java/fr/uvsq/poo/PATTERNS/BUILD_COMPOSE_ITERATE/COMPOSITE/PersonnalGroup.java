@@ -29,7 +29,7 @@ public class PersonnalGroup extends PersonnalType {
     public List<PersonnalType> getAllPersonnel() {
         return personnelList;
     }
-    
+
     @Override
     public boolean isGroup() {
         return true;

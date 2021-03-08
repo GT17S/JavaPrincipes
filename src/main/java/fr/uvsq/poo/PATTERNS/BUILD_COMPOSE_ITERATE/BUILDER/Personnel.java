@@ -34,7 +34,7 @@ public class Personnel extends PersonnalType {
     }
 
     public String getFonction() {
-        return fonction;
+        return this.fonction;
     }
 
     public LocalDate getDateNaisssance() {
@@ -50,7 +50,7 @@ public class Personnel extends PersonnalType {
         return false;
     }
 
-    static class PersonnalBuilder {
+    public static class PersonnalBuilder {
 
         // Required parameters
         private final String nom;
@@ -88,7 +88,7 @@ public class Personnel extends PersonnalType {
 
         this.nom=personnalBuilder.nom;
         this.prenom=personnalBuilder.prenom;
-        this.fonction=personnalBuilder.prenom;
+        this.fonction=personnalBuilder.fonction;
         this.dateNaisssance=personnalBuilder.dateNaissance;
         this.numerosTelephone=personnalBuilder.numerosTelephone;
     }

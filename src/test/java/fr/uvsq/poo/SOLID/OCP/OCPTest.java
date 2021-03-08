@@ -4,12 +4,6 @@ import org.junit.Before;
 import org.junit.Test;
 
 
-import javax.xml.stream.events.EntityReference;
-
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.core.Is.is;
-import static org.hamcrest.core.IsEqual.equalTo;
-
 public class OCPTest {
     Vendeur vendone,vendtwo;
     Employe empone,emptwo;
