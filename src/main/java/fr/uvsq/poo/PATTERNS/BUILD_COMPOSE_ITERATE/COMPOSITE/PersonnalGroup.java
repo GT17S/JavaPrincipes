@@ -1,6 +1,10 @@
 package fr.uvsq.poo.PATTERNS.BUILD_COMPOSE_ITERATE.COMPOSITE;
 
+import fr.uvsq.poo.PATTERNS.BUILD_COMPOSE_ITERATE.ITERATOR.GroupIterator;
+import fr.uvsq.poo.PATTERNS.BUILD_COMPOSE_ITERATE.ITERATOR.HierrarchicalIterator;
+
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -10,7 +14,7 @@ import java.util.List;
  * @version 2021
  */
 
-public class PersonnalGroup extends PersonnalType {
+public class PersonnalGroup extends PersonnalType implements Iterable<PersonnalType>{
 
     private final List<PersonnalType> personnelList;
 
@@ -34,4 +38,18 @@ public class PersonnalGroup extends PersonnalType {
     public boolean isGroup() {
         return true;
     }
+
+    @Override
+    public Iterator<PersonnalType> iterator() {
+        return personnelList.listIterator();
+    }
+
+    public GroupIterator groupIterator() {
+        return new GroupIterator(this);
+    }
+
+    public HierrarchicalIterator hierrarchicalIterator() {
+        return new HierrarchicalIterator(this);
+    }
+
 }
