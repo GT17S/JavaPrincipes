@@ -7,6 +7,14 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
+/**
+ * La classe <code>PersonnalTypeIterator</code> représente la classe d'iteration dans les groupe de personnels.
+ *
+ * @author GT17S GUENANE Toufik (uvsq21807955)
+ * @version 2021
+ */
+
+
 public abstract class PersonnalTypeIterator implements Iterator<PersonnalType> {
 
     private PersonnalGroup racine;
