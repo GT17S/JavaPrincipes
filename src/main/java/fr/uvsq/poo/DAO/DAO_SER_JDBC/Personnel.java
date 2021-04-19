@@ -1,4 +1,4 @@
-package fr.uvsq.poo.DAO_CRUD;
+package fr.uvsq.poo.DAO.DAO_SER_JDBC;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;

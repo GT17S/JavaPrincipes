@@ -1,6 +1,6 @@
-package fr.uvsq.poo.DAO_CRUD;
+package fr.uvsq.poo.DAO.DAO_SER_JDBC;
 
-import fr.uvsq.poo.DAO_CRUD.Personnel.PersonnalBuilder;
+import fr.uvsq.poo.DAO.DAO_SER_JDBC.Personnel.PersonnalBuilder;
 
 public enum MainSERIALIZATION {
     ENVIRONNEMENT;

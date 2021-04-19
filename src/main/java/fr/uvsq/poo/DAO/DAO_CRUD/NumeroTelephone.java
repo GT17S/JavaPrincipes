@@ -1,4 +1,4 @@
-package fr.uvsq.poo.DAO_CRUD;
+package fr.uvsq.poo.DAO.DAO_CRUD;
 
 /**
  * La classe <code>NumeroTelephone</code> représente le numero de telephone d'un Personnel de travail.

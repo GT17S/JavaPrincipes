@@ -1,4 +1,4 @@
-package fr.uvsq.poo.DAO_CRUD;
+package fr.uvsq.poo.DAO.DAO_CRUD;
 
 /**
  * L'interface  <code>DAO<T></></code> représente l'interface de base permettant de donner accées au concept CRUD.

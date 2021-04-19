@@ -1,8 +1,8 @@
-package fr.uvsq.poo.DAO_CRUD;
+package fr.uvsq.poo.DAO.DAO_CRUD;
+
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
 /**
  * La classe <code>PersonnalGroup</code> représente la classe de d'un groupe de Personnel de travail.

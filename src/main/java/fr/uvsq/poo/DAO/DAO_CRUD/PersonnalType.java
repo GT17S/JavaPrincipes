@@ -1,4 +1,4 @@
-package fr.uvsq.poo.DAO_CRUD;
+package fr.uvsq.poo.DAO.DAO_CRUD;
 
 import java.io.Serializable;
 
